@@ -1,0 +1,12 @@
+﻿node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+artifacts/
+cache/
+dist/
+build/
+.env
+frontend/.env
+*.log
+tsconfig.tsbuildinfo

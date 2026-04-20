@@ -1,0 +1,23 @@
+{
+  "name": "microfinance-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "frontend:install": "cd frontend && npm install",
+    "frontend:dev": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build",
+    "hardhat:node": "npx hardhat node",
+    "hardhat:compile": "npx hardhat compile",
+    "hardhat:test": "npx hardhat test",
+    "hardhat:deploy": "npx hardhat run scripts/deploy.js --network sepolia",
+    "hardhat:deploy:local": "npx hardhat run scripts/deploy.js --network localhost",
+    "dev": "concurrently \"npm run hardhat:node\" \"npm run hardhat:deploy:local\" \"npm run frontend:dev\"",
+    "install:all": "npm install && npm run frontend:install"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "concurrently": "^9.2.1",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.5"
+  }
+}
